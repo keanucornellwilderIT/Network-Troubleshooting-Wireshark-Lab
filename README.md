@@ -1,269 +1,208 @@
-# Network Troubleshooting & Wireshark Lab
-
-Repository: `Network-Troubleshooting-Wireshark-Lab`
+# 🌐 Network Troubleshooting & Wireshark Lab
 
 ## 📌 Overview
-This project simulates real-world network troubleshooting and help desk scenarios using Windows networking tools and Wireshark packet analysis. The lab focuses on diagnosing connectivity problems, DNS issues, DHCP configuration problems, and packet-level troubleshooting commonly encountered in IT support environments.
+This project simulates real-world network troubleshooting scenarios using Windows networking tools and Wireshark packet analysis. The lab focuses on diagnosing DNS and DHCP issues, analyzing network traffic, testing connectivity, and troubleshooting communication problems commonly handled by IT support specialists and network administrators.
 
-The goal of this project is to strengthen troubleshooting methodology, improve understanding of network communication, and gain hands-on experience analyzing traffic in enterprise-style environments.
-
----
+The goal of this project is to build hands-on experience with network diagnostics, packet analysis, troubleshooting methodology, and enterprise networking workflows.
 
 ## 🎯 Objectives
-- Troubleshoot DNS resolution issues
-- Analyze DHCP configurations and IP addressing
-- Capture and inspect packets using Wireshark
-- Test network connectivity using command-line tools
-- Practice real-world help desk troubleshooting workflows
-- Strengthen understanding of TCP/IP networking
-
----
+- Troubleshoot DNS connectivity issues
+- Configure and verify DHCP settings
+- Capture and analyze network traffic
+- Perform ping and traceroute diagnostics
+- Troubleshoot network connectivity problems
+- Practice real-world network troubleshooting workflows
 
 ## 🧰 Technologies Used
-- Windows 10/11
 - Wireshark
-- Command Prompt
-- TCP/IP Networking
+- Windows Server 2022
+- Windows 10/11
 - DNS
 - DHCP
-- Ping
-- Tracert/Traceroute
-- ipconfig
-- nslookup
-
----
+- Command Prompt
 
 ## 🏗️ Environment Setup
-
-### Devices Used
-- Windows Client Machine
-- Home/Virtual Network Environment
-
-### Network Configuration
-- DHCP Enabled
-- Private IPv4 Addressing
-- DNS Resolution Testing
-- Internet Connectivity Validation
-
----
+- Windows Server VM
+- Windows Client VM
+- Domain Environment
+- DNS Configuration
+- Network Connectivity
 
 ## ⚙️ Project Configuration Steps
+### Step 1 - Configure DNS & DHCP
+Configured DNS and DHCP services for network communication.
 
-### Step 1 - Install Wireshark
-- Downloaded and installed Wireshark
-- Configured packet capture permissions
-- Verified active network adapters
+📸 Screenshot here
 
-Screenshot here
+### Step 2 - Test Network Connectivity
+Verified communication between client and server systems.
 
----
+📸 Screenshot here
 
-### Step 2 - Verify Network Configuration
-- Used `ipconfig /all`
-- Reviewed IP address, subnet mask, gateway, and DNS server information
-- Confirmed DHCP configuration
+### Step 3 - Capture Network Traffic
+Captured and analyzed packets using Wireshark.
 
-Screenshot here
+📸 Screenshot here
 
----
+### Step 4 - Perform Network Diagnostics
+Used ping, tracert, and ipconfig tools for troubleshooting.
 
-### Step 3 - Perform Connectivity Testing
-- Tested connectivity using `ping`
-- Used `tracert` to analyze routing paths
-- Verified internet communication
-
-Screenshot here
-
----
-
-### Step 4 - Capture Network Traffic
-- Started packet captures in Wireshark
-- Filtered traffic using protocols and IP addresses
-- Analyzed DNS, ICMP, and TCP packets
-
-Screenshot here
-
----
+📸 Screenshot here
 
 ## 🛠️ Help Desk Scenarios
 
 ### Scenario 1 - DNS Troubleshooting
 
 #### Problem
-User could not access websites despite having internet connectivity.
+Users were unable to access network resources using hostnames.
 
 #### Troubleshooting
-- Ran `ping` tests
-- Used `nslookup`
-- Reviewed DNS server settings
-- Tested hostname resolution
+- Verified DNS configuration
+- Tested name resolution
+- Ran ipconfig /all
+- Performed ping tests
 
 #### Root Cause
-Incorrect or unreachable DNS server configuration.
+Incorrect DNS server configuration prevented hostname resolution.
+
+📸 Screenshot here
 
 #### Resolution
-Updated DNS settings and confirmed successful name resolution.
+Updated DNS settings and restored successful network communication.
 
 #### Skills Learned
 - DNS troubleshooting
-- Name resolution diagnostics
-- Network connectivity testing
-- Command-line troubleshooting
-
-Screenshot here
+- Network diagnostics
+- Name resolution testing
+- Windows networking
 
 ---
 
-### Scenario 2 - DHCP Configuration Issue
+### Scenario 2 - DHCP Configuration
 
 #### Problem
-Client device was unable to obtain a valid IP address.
+Client systems were not receiving valid IP addresses automatically.
 
 #### Troubleshooting
-- Ran `ipconfig /all`
-- Checked DHCP lease information
-- Renewed IP configuration using `ipconfig /renew`
-- Verified network adapter settings
+- Reviewed DHCP configuration
+- Renewed IP addresses using ipconfig /renew
+- Verified subnet configuration
+- Tested client connectivity
 
 #### Root Cause
-DHCP lease/configuration issue causing invalid network assignment.
+DHCP configuration issue prevented automatic IP assignment.
+
+📸 Screenshot here
 
 #### Resolution
-Renewed DHCP lease and restored proper network connectivity.
+Corrected DHCP settings and restored client network connectivity.
 
 #### Skills Learned
 - DHCP troubleshooting
-- IP addressing concepts
-- Network adapter diagnostics
-- Windows networking support
-
-Screenshot here
+- IP configuration
+- Network administration
+- Client connectivity troubleshooting
 
 ---
 
 ### Scenario 3 - Packet Capture Analysis
 
 #### Problem
-Need to identify network communication behavior and troubleshoot traffic flow.
+Network communication issues required packet-level analysis for troubleshooting.
 
 #### Troubleshooting
-- Captured packets using Wireshark
-- Applied protocol filters
-- Analyzed ICMP, DNS, and TCP traffic
-- Reviewed packet timing and communication flow
+- Captured network traffic using Wireshark
+- Analyzed DNS and ICMP packets
+- Reviewed communication flow
+- Verified successful packet transmission
 
 #### Root Cause
-Traffic analysis used to identify communication patterns and connectivity issues.
+Network communication required packet inspection for deeper analysis.
+
+📸 Screenshot here
 
 #### Resolution
-Validated successful communication and identified network behavior through packet analysis.
+Used Wireshark analysis to identify and verify network traffic behavior.
 
 #### Skills Learned
 - Packet analysis
-- Wireshark filtering
-- TCP/IP troubleshooting
-- Network traffic inspection
-
-Screenshot here
+- Wireshark usage
+- Traffic inspection
+- Network troubleshooting
 
 ---
 
 ### Scenario 4 - Ping & Traceroute Diagnostics
 
 #### Problem
-User experienced intermittent connectivity issues to external resources.
+Users experienced intermittent connectivity issues across the network.
 
 #### Troubleshooting
-- Used `ping` for latency and packet loss testing
-- Ran `tracert` to identify routing path
-- Compared hop responses
+- Performed ping tests
+- Ran tracert diagnostics
+- Verified network paths
+- Tested server communication
 
 #### Root Cause
-Network path latency and routing inconsistencies.
+Network path/connectivity issue affected communication between systems.
+
+📸 Screenshot here
 
 #### Resolution
-Validated route path and identified potential network bottlenecks.
+Identified connectivity issues and verified successful communication paths.
 
 #### Skills Learned
-- ICMP diagnostics
-- Traceroute analysis
-- Connectivity troubleshooting
+- Ping diagnostics
+- Traceroute troubleshooting
+- Connectivity testing
 - Network path analysis
-
-Screenshot here
 
 ---
 
 ### Scenario 5 - Connectivity Troubleshooting
 
 #### Problem
-User unable to connect to network resources.
+Client systems could not communicate with network resources.
 
 #### Troubleshooting
-- Verified physical and logical connectivity
-- Tested local gateway communication
-- Checked DNS and internet access
-- Reviewed IP configuration
+- Tested network communication
+- Verified IP configuration
+- Reviewed DNS settings
+- Confirmed server accessibility
 
 #### Root Cause
-Network configuration/connectivity issue affecting communication.
+Network configuration issue prevented successful communication.
+
+📸 Screenshot here
 
 #### Resolution
-Corrected connectivity settings and restored access.
+Corrected network settings and restored connectivity.
 
 #### Skills Learned
-- Network troubleshooting methodology
-- Root cause analysis
+- Connectivity troubleshooting
 - Windows networking
-- Help desk troubleshooting workflows
-
-Screenshot here
+- Network diagnostics
+- Troubleshooting methodology
 
 ---
 
 ## 🧠 Key Help Desk Skills Demonstrated
-- Troubleshooting methodology
-- Root cause analysis
-- Windows networking
-- DNS troubleshooting
-- DHCP troubleshooting
-- Packet analysis
-- Connectivity diagnostics
-- Command-line networking tools
-- Technical documentation
-
----
+- DNS Troubleshooting
+- DHCP Administration
+- Packet Analysis
+- Network Diagnostics
+- Connectivity Troubleshooting
+- Wireshark Analysis
+- Root Cause Analysis
+- Technical Documentation
 
 ## 📖 Lessons Learned
-This project improved my understanding of enterprise networking fundamentals and real-world troubleshooting processes. I learned how to diagnose connectivity issues systematically, analyze network traffic using Wireshark, and use networking utilities to identify root causes efficiently. The lab also strengthened my documentation and help desk troubleshooting skills.
+This project improved my understanding of network troubleshooting and packet analysis within Windows environments. I gained hands-on experience diagnosing DNS and DHCP issues, capturing and analyzing network traffic, performing connectivity testing, and troubleshooting communication problems using enterprise networking tools.
 
----
+The lab also strengthened my troubleshooting methodology, networking knowledge, and technical documentation skills.
 
 ## 🚀 Future Improvements
-- Add VLAN troubleshooting scenarios
-- Simulate enterprise firewall configurations
-- Analyze HTTP/HTTPS traffic
-- Add advanced Wireshark filtering
-- Create Active Directory network scenarios
-- Add VPN troubleshooting exercises
-
----
-
-## 📸 Screenshots
-Include:
-- `ipconfig /all`
-- Ping tests
-- Traceroute results
-- Wireshark packet captures
-- DNS lookup results
-- DHCP lease information
-- Connectivity troubleshooting screenshots
-
----
-
-## 👨‍💻 Author
-Keanu
-
-LinkedIn: YOUR_LINKEDIN_HERE
-
-GitHub: YOUR_GITHUB_HERE
+- Configure advanced Wireshark filtering
+- Simulate VLAN troubleshooting
+- Add firewall troubleshooting scenarios
+- Implement network monitoring tools
