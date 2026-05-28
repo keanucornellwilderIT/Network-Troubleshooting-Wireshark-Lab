@@ -1,231 +1,157 @@
-# Network Troubleshooting & Wireshark Lab
+# 🌐 Wireshark & Network Troubleshooting Help Desk Lab
 
-## Overview
-This project simulates real-world network troubleshooting scenarios within a Windows domain environment using networking tools and Wireshark packet analysis. The lab focuses on diagnosing DNS and connectivity issues, analyzing packet traffic, troubleshooting shared drive access, and testing communication between systems commonly managed by IT support specialists and network administrators.
+## 📌 Overview
+This project demonstrates basic help desk and network troubleshooting scenarios using Wireshark within a Windows domain environment. The lab focuses on DNS troubleshooting, shared drive connectivity issues, and network communication testing commonly handled by IT support technicians.
 
-The goal of this project is to build hands-on experience with enterprise networking, packet analysis, troubleshooting methodology, and real-world network diagnostics workflows.
+---
 
-## Business Impact
-Network communication issues can prevent users from accessing domain resources, shared drives, printers, and internal systems, directly impacting business operations and employee productivity.
+## 💼 Business Impact
+Network and connectivity issues can prevent users from accessing internal systems, shared drives, and company resources, impacting daily business operations.
 
-## Objectives
-- Troubleshoot DNS connectivity issues
-- Configure and verify DHCP settings
-- Analyze network traffic using Wireshark
-- Test communication using ping and tracert
-- Troubleshoot shared drive connectivity
-- Practice enterprise network troubleshooting workflows
+---
 
-## Technologies Used
+## 🧰 Technologies Used
 - Wireshark
 - Windows Server 2022
-- Windows 10/11
-- Active Directory Domain Services (AD DS)
+- Windows 10 Enterprise
+- Active Directory
 - DNS
-- DHCP
-- Command Prompt
-- File & Storage Services
+- SMB/File Sharing
+- Microsoft Azure
 
-## Environment Setup
+---
+
+## 🏗️ Environment Setup
 - Azure Virtual Machines
-- Windows Server VM (dc-1)
-- Windows Client VM (client-1)
+- Domain Controller (dc-1)
+- Client Machine (client-1)
 - Active Directory Domain Environment
-- DNS & DHCP Services
 - Finance Shared Drive
-- Domain Users & Security Groups
 
-## Key Help Desk Skills Demonstrated
+---
+
+## 🧠 Skills Demonstrated
 - DNS Troubleshooting
-- Network Diagnostics
-- Packet Analysis
-- Connectivity Troubleshooting
 - Shared Drive Troubleshooting
-- Root Cause Analysis
-
-# Project Configuration Steps
-
-### Step 1 - Configure Active Directory & Networking Services
-Configured Active Directory, DNS, DHCP, File Services, and networking roles on the domain controller.
-
-### Step 2 - Configure Finance Shared Drive
-Created Finance OU, Finance security group, and configured shared folder permissions for department access.
-
-### Step 3 - Verify Network Connectivity
-Verified communication between dc-1 and client-1 using hostname resolution and ping testing.
-
-### Step 4 - Capture Network Traffic Using Wireshark
-Captured DNS and ICMP traffic using Wireshark packet analysis during troubleshooting scenarios.
+- Wireshark Packet Analysis
+- Connectivity Testing
+- Network Diagnostics
+- Help Desk Troubleshooting
 
 ---
 
-# 🛠️ Help Desk Scenarios
+# 🛠️ Scenarios
 
-# Scenario 1 - DNS Troubleshooting & Name Resolution Failure
+---
+
+# Scenario 1 - DNS Troubleshooting
 
 ### Problem
-Users were unable to access internal domain resources because hostnames were failing to resolve properly within the network environment.
+Users were unable to access internal resources due to DNS resolution issues within the environment.
 
 ### Troubleshooting
-- Verified baseline connectivity
-- Reviewed DNS configuration
-- Ran ipconfig /all diagnostics
 - Tested hostname resolution using ping and nslookup
+- Reviewed DNS configuration
 - Captured DNS traffic using Wireshark
-
-### Root Cause
-Incorrect DNS server configuration prevented successful hostname resolution and communication with internal domain resources.
-
-### Screenshots
-Successful ping to dc-1 before DNS failure
-<img width="1024" height="617" alt="image" src="https://github.com/user-attachments/assets/7cc0d517-f502-4d50-9ac7-73e4bce4768d" />
-
-Failed ping and nslookup after incorrect DNS configuration
-<img width="1026" height="313" alt="image" src="https://github.com/user-attachments/assets/5b321964-e5e5-47f2-a0ad-e8a328f854a4" />
-
-Wireshark DNS packet capture showing failed DNS queries
-<img width="1917" height="708" alt="image" src="https://github.com/user-attachments/assets/845fe233-9a9b-45a6-ae67-cb766f68ec6e" />
-
-ipconfig /all output showing incorrect DNS server
-<img width="1136" height="73" alt="image" src="https://github.com/user-attachments/assets/c390efaa-63cd-4619-9dc3-bf135f13ae7b" />
-
-Restored successful hostname resolution after correcting DNS settings
-<img width="396" height="455" alt="image" src="https://github.com/user-attachments/assets/d98b69c5-1225-43f2-b195-49b8d0492c06" />
-<img width="1919" height="772" alt="image" src="https://github.com/user-attachments/assets/803168d5-9f42-4e80-8878-d9fa9f5afff1" />
-
-### Resolution
-Corrected DNS server configuration, flushed DNS cache, and restored successful communication with internal domain resources.
-
----
-
-# Scenario 2 - DHCP & Network Configuration Troubleshooting
-
-### Problem
-Client system experienced network communication failures after an incorrect static IP configuration was applied, preventing communication with internal domain resources.
-
-### Troubleshooting
-- Reviewed client IPv4 configuration
-- Verified DNS settings
-- Ran ipconfig /release and ipconfig /renew
-- Tested client connectivity
-- Reviewed assigned IP configuration using ipconfig /all
-- Tested DNS communication using nslookup and ping
-
-### Root Cause
-An incorrect static IP configuration and invalid DNS settings prevented the client workstation from communicating with the internal domain environment.
+- Corrected DNS settings and verified communication
 
 ## Screenshots
 
-### Incorrect Static IP Configuration
-This screenshot shows the client workstation configured with an incorrect static IPv4 address and invalid network settings during the simulated network communication failure scenario.
+### Failed DNS resolution using ping or nslookup  
 
-### Failed Network Communication
-This screenshot shows failed communication attempts between `client-1` and internal domain resources during the troubleshooting investigation.
+<img width="976" height="510" alt="image" src="https://github.com/user-attachments/assets/d5d75810-cc5d-41ed-95b8-4a7bdf1d8295" />
 
-### Network Configuration Review Using ipconfig /all
-This screenshot shows the output of `ipconfig /all` used to review the assigned IPv4 configuration, DNS settings, and gateway information on `client-1`.
+### Wireshark DNS packet capture
 
-### DNS Troubleshooting Commands
-This screenshot shows DNS and connectivity troubleshooting commands used during the investigation process.
+<img width="1918" height="1040" alt="image" src="https://github.com/user-attachments/assets/ac9fdc08-f878-43a9-87e0-ae748c2e4c23" />
 
-### Restored Automatic Network Configuration
-This screenshot shows the client workstation restored to automatic IP and DNS configuration settings after troubleshooting the network communication issue.
+### DNS configuration investigation 
 
-### Successful Network Communication After Resolution
-This screenshot shows successful internal communication and valid network configuration after restoring proper client network settings and renewing the client IP configuration.
+<img width="788" height="69" alt="image" src="https://github.com/user-attachments/assets/9ae76c2d-6954-4932-a69f-3cd9e848e53e" />
+
+### Restored successful hostname resolution  
+<img width="590" height="476" alt="image" src="https://github.com/user-attachments/assets/537ab535-d1e1-436b-9679-7e58d3bbc9de" />
 
 ### Resolution
-Restored automatic IP addressing and DNS configuration settings, successfully re-establishing internal network communication and domain connectivity for the client workstation.
+Corrected DNS configuration and restored successful communication with internal resources.
 
 ---
 
-# Scenario 3 - Finance Shared Drive Connectivity Failure
+# Scenario 2 - Finance Shared Drive Connectivity Failure
 
 ### Problem
-Finance employees lost access to a shared network drive containing department financial reports and spreadsheets.
+Finance users were unable to access a shared network drive containing department files and reports.
 
 ### Troubleshooting
-- Verified issue across multiple users
-- Tested network connectivity
-- Reviewed shared folder permissions
-- Verified Finance security group access
-- Tested shared drive communication
+- Tested connectivity to dc-1
+- Investigated Finance shared folder configuration
+- Captured SMB traffic using Wireshark
+- Restored shared folder access
 
-### Root Cause
-Network connectivity disruption prevented users from accessing the Finance shared drive successfully.
+## Screenshots
 
-### Screenshots
-- Critical shared drive outage showing business impact
-- Finance security group and shared folder permissions
-- Failed shared drive access or network path error
-- Network troubleshooting and connectivity testing
-- Restored shared drive access verification
+### Failed access to `\\dc-1\Finance`  
+
+<img width="1114" height="627" alt="image" src="https://github.com/user-attachments/assets/3e9272c9-1285-49da-9d8a-02d9c5a87d55" />
+
+### Successful ping to dc-1 during investigation  
+
+<img width="659" height="374" alt="image" src="https://github.com/user-attachments/assets/c3028f79-64b4-4ea6-8568-053201253f71" />
+
+### Shared folder configuration review 
+
+<img width="358" height="478" alt="image" src="https://github.com/user-attachments/assets/85112e8f-c96c-4cbc-ab13-1c24fd0765f8" />
+
+### Wireshark SMB traffic capture  
+
+<img width="1920" height="708" alt="image" src="https://github.com/user-attachments/assets/c4006ea3-2462-44b6-914f-b90397132e3b" />
+
+### Restored shared drive access  
+
+<img width="1118" height="644" alt="image" src="https://github.com/user-attachments/assets/defea5dc-75ce-4b70-9a33-81dcec79197a" />
 
 ### Resolution
-Restored network connectivity and verified successful access to Finance shared resources for affected users.
+Re-enabled shared folder access and verified successful connectivity to the Finance shared drive.
 
 ---
 
-# Scenario 4 - Ping & Traceroute Connectivity Diagnostics
+# Scenario 3 - Connectivity Investigation
 
 ### Problem
-Users experienced intermittent communication issues between network systems and internal resources.
+Users experienced intermittent network communication issues between systems within the environment.
 
 ### Troubleshooting
 - Performed ping diagnostics
 - Ran tracert testing
-- Verified network paths
-- Tested communication between systems
-- Analyzed connectivity responses
+- Captured ICMP traffic using Wireshark
+- Verified successful communication between systems
 
-### Root Cause
-Network communication issue affected connectivity between client and server systems.
+## Screenshots
 
-### Screenshots
-- Ping testing between client-1 and dc-1
-- tracert diagnostics output
-- Connectivity testing results
-- Packet responses shown in Command Prompt
-- Restored successful communication testing
+### Ping connectivity testing
+
+<img width="585" height="353" alt="image" src="https://github.com/user-attachments/assets/e7402035-3196-4774-b260-03d27d21900d" />
+
+### Tracert investigation 
+
+<img width="617" height="233" alt="image" src="https://github.com/user-attachments/assets/3d9bb839-e76d-4ff1-8ef0-e2d3f4d34d70" />
+
+### Wireshark ICMP packet capture  
+
+<img width="1798" height="778" alt="image" src="https://github.com/user-attachments/assets/63a43f50-0c66-480c-a4ec-7900f909e9fb" />
+
+### Restored stable communication  
 
 ### Resolution
-Verified successful communication paths and restored stable network connectivity between systems.
+Verified successful communication between systems and confirmed stable network connectivity.
 
 ---
 
-# Scenario 5 - Wireshark Packet Analysis
+## 📖 Lessons Learned
+This project improved my understanding of Wireshark, DNS troubleshooting, SMB traffic analysis, and network diagnostics within a Windows domain environment. I gained hands-on experience using packet captures to support help desk troubleshooting scenarios and investigate real network communication issues.
 
-### Problem
-Network communication issues required packet-level analysis to investigate DNS and connectivity behavior within the environment.
+---
 
-### Troubleshooting
-- Captured network traffic using Wireshark
-- Applied DNS and ICMP filters
-- Reviewed packet communication flow
-- Verified DNS query responses
-- Analyzed network communication behavior
-
-### Root Cause
-Packet-level analysis was required to verify network communication and troubleshoot DNS-related traffic issues.
-
-### Screenshots
-- Wireshark DNS packet capture
-- ICMP packet analysis
-- Applied Wireshark filtering
-- DNS query and response traffic
-- Successful packet communication verification
-
-### Resolution
-Used Wireshark packet analysis to identify and verify successful network communication behavior and troubleshooting results.
-
-## Lessons Learned
-This project improved my understanding of enterprise networking, DNS troubleshooting, packet analysis, and connectivity diagnostics within Windows environments. I gained hands-on experience diagnosing DNS and DHCP issues, troubleshooting shared drive access, analyzing packet traffic with Wireshark, and verifying communication between systems using enterprise networking tools.
-
-The lab also strengthened my troubleshooting methodology, networking knowledge, and technical documentation skills.
-
-## Future Improvements
-- Configure advanced Wireshark filtering
-- Simulate firewall troubleshooting scenarios
-- Implement VLAN/network segmentation testing
-- Add VPN connectivity troubleshooting
-- Configure network monitoring tools
+## ✍️ Author
+**Keanu Wilder**  
+IT Support & Cloud Professional
