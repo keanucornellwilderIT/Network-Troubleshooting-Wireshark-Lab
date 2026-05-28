@@ -1,16 +1,16 @@
-# 🌐 Wireshark & Network Troubleshooting Help Desk Lab
+# Wireshark & Network Troubleshooting Help Desk Lab
 
-## 📌 Overview
+## Overview
 This project demonstrates basic help desk and network troubleshooting scenarios using Wireshark within a Windows domain environment. The lab focuses on DNS troubleshooting, shared drive connectivity issues, and network communication testing commonly handled by IT support technicians.
 
 ---
 
-## 💼 Business Impact
+## Business Impact
 Network and connectivity issues can prevent users from accessing internal systems, shared drives, and company resources, impacting daily business operations.
 
 ---
 
-## 🧰 Technologies Used
+## Technologies Used
 - Wireshark
 - Windows Server 2022
 - Windows 10 Enterprise
@@ -21,7 +21,7 @@ Network and connectivity issues can prevent users from accessing internal system
 
 ---
 
-## 🏗️ Environment Setup
+## Environment Setup
 - Azure Virtual Machines
 - Domain Controller (dc-1)
 - Client Machine (client-1)
@@ -30,7 +30,7 @@ Network and connectivity issues can prevent users from accessing internal system
 
 ---
 
-## 🧠 Skills Demonstrated
+## Skills Demonstrated
 - DNS Troubleshooting
 - Shared Drive Troubleshooting
 - Wireshark Packet Analysis
@@ -40,7 +40,7 @@ Network and connectivity issues can prevent users from accessing internal system
 
 ---
 
-# 🛠️ Scenarios
+# Scenarios
 
 ---
 
@@ -139,19 +139,12 @@ Users experienced intermittent network communication issues between systems with
 ### Wireshark ICMP packet capture  
 
 <img width="1798" height="778" alt="image" src="https://github.com/user-attachments/assets/63a43f50-0c66-480c-a4ec-7900f909e9fb" />
-
-### Restored stable communication  
-
+  
 ### Resolution
 Verified successful communication between systems and confirmed stable network connectivity.
 
 ---
 
-## 📖 Lessons Learned
+## Lessons Learned
 This project improved my understanding of Wireshark, DNS troubleshooting, SMB traffic analysis, and network diagnostics within a Windows domain environment. I gained hands-on experience using packet captures to support help desk troubleshooting scenarios and investigate real network communication issues.
 
----
-
-## ✍️ Author
-**Keanu Wilder**  
-IT Support & Cloud Professional
