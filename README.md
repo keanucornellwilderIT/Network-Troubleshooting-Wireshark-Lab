@@ -1,4 +1,4 @@
-# Wireshark & Network Troubleshooting Help Desk Lab
+# Network Troubleshooting Wireshark Lab
 
 ## Overview
 This project demonstrates basic help desk and network troubleshooting scenarios using Wireshark within a Windows domain environment. The lab focuses on DNS troubleshooting, shared drive connectivity issues, and network communication testing commonly handled by IT support technicians.
